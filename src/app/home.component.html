@@ -1,6 +1,6 @@
 <div class="container">
   <div class="content">
-    <img class="banner" src="../assets/images/banner.png" alt="Banner">
+    <img class="banner-img" src="../assets/images/banner.png" alt="Banner">
     <p>
       Thank you for taking the time to visit this page.
       I'd like to share some information about some of the projects I have been a part of.
@@ -15,10 +15,17 @@
       To minimize data transfer, each lazy-loaded page made HTTP requests and once the data was fetched,
       it was processed by multiple services to maximize its usage.
     </p>
-
-    <a routerLink="/campaign">Go to Campaign</a>
-
     <p>Many of the pages consisted of a table of customers with filters, buttons, and pagination controls to manage them.</p>
+    
+    <p>
+      Take a look by clicking on the image below, this is a sample of my work,
+      which is based on some accomplishments from my past projects
+    </p>
+    <a routerLink="/campaign">
+      <img class="work-img" src="../assets/images/charts.png" alt="SAMPLE WORK">
+    </a>
+    <a class="github-link" href="https://github.com/mtakeda05/campaign/tree/main/src/app/modules/campaign">VISIT GITHUB</a>
+
     <p>
       To enhance performance, our team implemented server-side control for certain components,
       such as the filter function. This allowed us to process user input on the server rather than the client side,
@@ -49,7 +56,6 @@
       Using a microservice-like structure, I implemented Python server-side apps and NodeJS server-side apps
       that communicated via HTTP connections. With the large volume of data I was working with,
       I utilized various data analysis libraries in Python and implemented basic machine learning techniques to improve results.
-      Unfortunately, due to contract restrictions, I am unable to provide further details about this project.
     </p>
   </div>
 </div>
