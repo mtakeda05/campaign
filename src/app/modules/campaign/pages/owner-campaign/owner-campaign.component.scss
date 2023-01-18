@@ -1,0 +1,37 @@
+.customer-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+
+  .chart {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .text-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .text-center {
+      text-align: center;
+      .total-number {
+        font-size: 48px;
+      }
+    }
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+    @media (min-width: 1200px) {
+      width: 50%;
+    }
+  }
+
+  .left-section {
+    .text-center {
+      font-weight: bold;
+      margin-top: 50px;
+    }
+  }
+}

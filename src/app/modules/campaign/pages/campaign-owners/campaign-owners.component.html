@@ -1,0 +1,40 @@
+<div class="table-container">
+  <h2 class="title">CAMPAIGN OWNERS</h2>
+  <mat-form-field class="filter-form">
+    <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+  </mat-form-field>
+  <div class="mat-elevation-z8">
+    <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="customers">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Customers</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.customers.length}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <button mat-raised-button class="owner-link-button">
+                <a routerLink="/{{element.id}}/owner">
+                  <mat-icon>remove_red_eye</mat-icon>
+                </a>
+              </button>
+          </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; let even = even; columns: displayedColumns;" [ngClass]="{even: even}"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[10, 30, 100]" showFirstLastButtons class="paginator"></mat-paginator>
+  </div>
+</div>

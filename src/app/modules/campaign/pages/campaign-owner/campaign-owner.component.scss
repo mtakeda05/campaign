@@ -1,0 +1,28 @@
+.owner-container {
+  width: 90%;
+  margin: 0 auto;
+  .custom-tab-group ::ng-deep .mat-tab-label-active {
+    background-color: #ff0000; /* red color */
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: black;
+  }
+  .back-button {
+    border: none;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #fcfc94;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+  }
+}

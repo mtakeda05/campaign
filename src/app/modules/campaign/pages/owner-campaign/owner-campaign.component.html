@@ -1,0 +1,20 @@
+<div class="customer-container" *ngIf="customers">
+  <div class="left-section">
+    <h2>STATUS OF CUSTOMERS</h2>
+    <highcharts-chart class="chart" [Highcharts]="highcharts" [options]="pieChartOptions"></highcharts-chart>
+    <div class="text-container">
+      <div class="text-center">
+        <p>TOTAL CUSTOMERS</p>
+        <p class="total-number">{{totalCustomers}}</p>
+      </div>
+      <div class="text-center">
+        <p>TOTAL EMAILS SENT</p>
+        <p class="total-number">{{totalEmailsSent}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="right-section">
+    <h2>CUSTOMER RESPONSE RATE</h2>
+    <highcharts-chart class="chart" [Highcharts]="highcharts" [options]="columnChartOptions"></highcharts-chart>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="settings-container">
+  <form [formGroup]="settingsForm" (ngSubmit)="onSave()">
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name" required>
+      <mat-error *ngIf="settingsForm.get('name')?.hasError('required')">Name is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Email" formControlName="email" required email>
+      <mat-error *ngIf="settingsForm.get('email')?.hasError('required')">Email is required</mat-error>
+      <mat-error *ngIf="settingsForm.get('email')?.hasError('email')">Email is not valid</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="settingsForm.invalid">SAVE</button>
+  </form>
+</div>

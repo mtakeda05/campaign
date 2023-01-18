@@ -1,0 +1,14 @@
+<div *ngIf="ownerId" class="owner-container">
+  <h2 class="title">OWNER DETAILS</h2>
+  <mat-tab-group>
+    <mat-tab label="Campaign">
+      <owner-campaign [ownerId]="ownerId"></owner-campaign>
+    </mat-tab>
+    <mat-tab label="Settings">
+      <owner-settings [ownerId]="ownerId"></owner-settings>
+    </mat-tab>
+  </mat-tab-group>
+  <button mat-fab class="back-button" (click)="onBack()" matTooltip="Back">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+</div>

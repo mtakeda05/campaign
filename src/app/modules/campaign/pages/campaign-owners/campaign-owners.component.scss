@@ -1,0 +1,52 @@
+.table-container {
+  width: 90%;
+  margin: 0 auto;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: black;
+  }
+  .filter-form {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .mat-row {
+    margin: 16px 0;
+    font-size: 1.2rem;
+  }
+  .even {
+    background-color: #f5f5f5;
+  }
+  
+  .owner-link-button {
+    display: block;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    width: 80px;
+    background-color: #c9e2f5;
+    a {
+      display: inline-block;
+      width: 100%;
+      color: inherit;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+    a:visited { 
+      text-decoration: none;
+      color: black;
+    }
+    a:active {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+
